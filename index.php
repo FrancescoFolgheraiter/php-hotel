@@ -61,9 +61,7 @@
             $updateHotels[] = $hotel;
         }
     }
-    var_dump($filterPark);
-    var_dump($updateHotels);
-    var_dump($filterVote);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +81,7 @@
         <main>
             <div class="container mb-3">
                 <form action="" method="GET">
-                    <div>
+                    <div class="mb-3">
                         <label for="parking">Disponibilità parcheggio</label>
                         <select name="parking" id="parking">
                             <option value="" selected>Qualsiasi</option>
@@ -91,9 +89,9 @@
                             <option value="false">Non disponibile</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="mb-3">
                         <label for="vote">Cerca per voto</label>
-                        <input type="number" name="vote" id="vote" max = "20" min = "0">
+                        <input type="number" name="vote" id="vote" max = "5" min = "0" placeholder="0">
                     </div>
                     <button tyep="submit">
                         Cerca
