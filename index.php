@@ -58,6 +58,26 @@
         </header>
         <main>
             <div class="container">
+                <ul>
+                    <?php
+                        foreach ($hotels as $hotel) {
+                    ?>
+                    <li>
+                        <?php    
+                            echo $hotel['name'];
+                        ?>
+                        <ul>
+                            <?php    
+                                foreach ($hotel as $key => $elem){
+                                    echo "<li>".$key."=>".$elem."</li>";
+                                }
+                            ?>
+                        </ul>
+                    </li>
+                    <?php    
+                        }
+                    ?>
+                </ul>
             </div>
         </main>
     </body>
