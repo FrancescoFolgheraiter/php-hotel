@@ -39,6 +39,7 @@
         ],
 
     ];
+    $keysObjHotel = array_keys($hotels[0]);
 
 ?>
 <!DOCTYPE html>
@@ -58,8 +59,55 @@
         </header>
         <main>
             <div class="container">
+                <table>
+                    <!--crezione header table-->
+                    <thead>
+                        <?php
+                        foreach ($keysObjHotel as $singleKey) {
+                        ?>
+                        <th class="border-2">
+                            <?php
+                            echo $singleKey;
+                            ?>
+                        </th>
+                        <?php
+                        }
+                        ?>
+                    </thead>
+                    <!--fine header table-->
+                    <!--body table-->
+                    <tbody>
+                        <?php
+                            foreach ($hotels as $hotel) {
+                        ?>
+                        <tr>
+                            <?php
+                                foreach ($hotel as $elem) {
+                            ?>
+                            <td class="border-1">
+                                <?php
+                                    echo $elem;
+                                ?>
+                            </td>
+                            <?php
+                                }
+                             ?>  
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </tbody>
+                    <!--fine table-->
+                </table>
+            </div>
+        </main>
+    </body>
+</html>
+
+<!--
+
                 <ul>
-                    <?php
+                <?php
                         foreach ($hotels as $hotel) {
                     ?>
                     <li>
@@ -78,7 +126,4 @@
                         }
                     ?>
                 </ul>
-            </div>
-        </main>
-    </body>
-</html>
+-->
