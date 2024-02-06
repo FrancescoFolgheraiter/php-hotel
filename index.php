@@ -53,12 +53,12 @@
     </head>
     <body>
         <header>
-            <h1 class="text-center">
+            <h1 class="text-center m-5">
                 Php Hotel
             </h1>
         </header>
         <main>
-            <div class="container">
+            <div class="container d-flex justify-content-center ">
                 <table>
                     <!--crezione header table-->
                     <thead>
@@ -82,11 +82,19 @@
                         ?>
                         <tr>
                             <?php
-                                foreach ($hotel as $elem) {
+                                foreach ($hotel as $key=>$elem) {
                             ?>
                             <td class="border-1">
                                 <?php
-                                    echo $elem;
+                                    if ($key == "parking" && $elem==true) {
+                                        echo "yes";
+                                    }
+                                    elseif($key == "parking" && $elem==false){
+                                        echo "no";
+                                    }
+                                    else{
+                                        echo $elem;
+                                    }
                                 ?>
                             </td>
                             <?php
