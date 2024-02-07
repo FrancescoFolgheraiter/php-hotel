@@ -71,8 +71,10 @@
         <title>Php Hotel</title>
         <!--boostrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!--css-->
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class=" bg-body-tertiary ">
         <header>
             <h1 class="text-center m-5">
                 Php Hotel
@@ -93,13 +95,13 @@
                         <label for="vote">Cerca per voto</label>
                         <input type="number" name="vote" id="vote" max = "5" min = "0" placeholder="0">
                     </div>
-                    <button tyep="submit">
+                    <button type="submit" id="cerca">
                         Cerca
                     </button>
                 </form>
             </div>
             <div class="container d-flex justify-content-center ">
-                <table>
+                <table class="w-100">
                     <!--crezione header table-->
                     <thead>
                         <?php
@@ -124,7 +126,7 @@
                             <?php
                                 foreach ($hotel as $key=>$elem) {
                             ?>
-                            <td class="border-1">
+                            <td class="border-bottom">
                                 <?php
                                     if ($key == "parking" && $elem==true) {
                                         echo "yes";
@@ -151,4 +153,3 @@
         </main>
     </body>
 </html>
-
